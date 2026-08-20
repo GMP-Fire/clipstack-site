@@ -1,0 +1,68 @@
+:root {
+  color-scheme: light dark;
+  --ink: #1c1b1a;
+  --dim: #5f5b57;
+  --rule: #e2ded9;
+  --ground: #fbfaf8;
+  --card: #ffffff;
+  --accent: #6b4fd8;
+  --amber: #d98324;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #ece8e3;
+    --dim: #a49e97;
+    --rule: #35322e;
+    --ground: #171614;
+    --card: #201e1c;
+    --accent: #a893f5;
+    --amber: #e8a75a;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 0 24px 96px;
+  background: var(--ground);
+  color: var(--ink);
+  font: 17px/1.62 ui-sans-serif, -apple-system, "SF Pro Text", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+main { max-width: 44rem; margin: 0 auto; }
+header { padding: 72px 0 36px; border-bottom: 1px solid var(--rule); margin-bottom: 36px; }
+h1 { font-size: 2.1rem; line-height: 1.2; margin: 0 0 8px; letter-spacing: -0.02em; }
+h2 {
+  font-size: 1.18rem; margin: 40px 0 10px; letter-spacing: -0.01em;
+  padding-top: 20px; border-top: 1px solid var(--rule);
+}
+h2:first-of-type { border-top: 0; padding-top: 0; }
+h3 { font-size: 1rem; margin: 24px 0 6px; }
+p, li { color: var(--ink); }
+.lede { font-size: 1.12rem; color: var(--dim); margin: 0; }
+.dim { color: var(--dim); }
+.stamp { font-size: 0.9rem; color: var(--dim); margin-top: 6px; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+ul { padding-left: 1.15rem; }
+li { margin: 6px 0; }
+.card {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 12px;
+  padding: 18px 20px; margin: 22px 0;
+}
+.card h3 { margin-top: 0; }
+.card p:last-child { margin-bottom: 0; }
+.key { font-weight: 600; }
+code {
+  font: 0.9em ui-monospace, "SF Mono", Menlo, monospace;
+  background: color-mix(in srgb, var(--ink) 8%, transparent);
+  padding: 1px 5px; border-radius: 5px;
+}
+nav { margin-top: 18px; font-size: 0.95rem; }
+nav a { margin-right: 18px; }
+footer {
+  margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--rule);
+  font-size: 0.9rem; color: var(--dim);
+}
+table { border-collapse: collapse; width: 100%; margin: 18px 0; font-size: 0.95rem; }
+th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { color: var(--dim); font-weight: 600; }
+.no { color: var(--dim); }
