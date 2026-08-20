@@ -24,12 +24,15 @@ pages are otherwise finished and Apple needs the URL more than it needs the
 mailbox on day one. It must receive mail before the app is submitted, because a
 reviewer clicks it.
 
-## Pointing this at clipstackapp.com
+## The domain
 
-Do NOT add a `CNAME` file until the domain resolves. GitHub Pages redirects the
-`github.io` address to whatever `CNAME` names, so a `CNAME` for a domain that
-does not answer yet breaks the working privacy URL — which is the one thing here
-that must not break.
+`clipstackapp.com`, registered 2026-08-20 through Cloudflare.
 
-Order: register the domain, set the DNS records, confirm they resolve, then add
-`CNAME`.
+`CNAME` was added only **after** the DNS was confirmed answering from outside
+Cloudflare. GitHub Pages redirects the `github.io` address to whatever `CNAME`
+names, so adding it first would have broken the working privacy URL — the one
+thing here that must not break — for as long as the domain took to resolve.
+
+The four apex A records point at GitHub's Pages addresses and are **DNS only,
+not proxied**. Proxying them would put Cloudflare in front of GitHub, and GitHub
+then cannot answer the challenge that issues the HTTPS certificate.
