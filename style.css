@@ -55,7 +55,11 @@ code {
   font: 0.9em ui-monospace, "SF Mono", Menlo, monospace;
   background: color-mix(in srgb, var(--ink) 8%, transparent);
   padding: 1px 5px; border-radius: 5px;
+  /* A container path is longer than the column. Without this it runs out past
+     the text and the page scrolls sideways on a phone. */
+  overflow-wrap: anywhere;
 }
+table { display: block; overflow-x: auto; }
 nav { margin-top: 18px; font-size: 0.95rem; }
 nav a { margin-right: 18px; }
 footer {
